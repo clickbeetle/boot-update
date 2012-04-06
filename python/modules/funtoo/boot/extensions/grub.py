@@ -207,7 +207,11 @@ class GRUBExtension(Extension):
 
 	def Guppy(self, argstring, fatal=True):
 		""" probes a device """
+<<<<<<< HEAD
 		out = commands.getstatusoutput("/sbin/grub-probe " + argstring +" |& grep -iv LVM")
+=======
+		out = commands.getstatusoutput("/sbin/grub-probe " + argstring)
+>>>>>>> upstream/master
 		if fatal and out[0] != 0:
 			print "grub-probe " + argstring
 			print out[1]
